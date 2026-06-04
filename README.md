@@ -7,7 +7,7 @@ The project is structured into three architectural paradigms:
   - **Streaming & Real-Time Analytics**
   - **Data Engineering for AI/ML**
 
-The architecture is implemented using the Open-Source ```Apache``` Ecosystem to solve critical business problems including scalability, real-time inventory tracking, anomaly detection, and personalized user experiences.
+The architecture is implemented using the Open-Source `Apache` Ecosystem to solve critical business problems including scalability, real-time inventory tracking, anomaly detection, and personalized user experiences.
 
 ## 🏗️ System Architecture Overview
 
@@ -37,12 +37,13 @@ The architecture is implemented using the Open-Source ```Apache``` Ecosystem to 
 ```
 
 ## 🛠️ Tech Stack
-*   **Storage & Format:** Apache Iceberg, MinIO (S3-compatible Object Storage)
-*   **Compute & Query Engines:** Apache Spark (PySpark), Trino
+*   **Storage & Format:** Apache Iceberg, MinIO
+*   **Compute & Query Engines:** Apache Spark, Trino
 *   **Streaming & Ingestion:** Apache Kafka, Debezium (CDC), Apache Flink
 *   **Orchestration & Analytics:** Apache Airflow, ClickHouse, OpenSearch
-*   **AI/ML & Vector:** Spark MLlib, PostgreSQL (`pgvector`)
+*   **AI/ML & Vector:** Spark MLlib, PostgreSQL
 *   **Visualization:** Apache Superset, Streamlit
+
 
 ## 📁 Repository Structure & Projects
 
@@ -54,6 +55,7 @@ This section covers the core data infrastructure, utilizing the **Medallion Arch
 *   **Ad-hoc Querying & Business Intelligence:** Defined analytical business models in the **Gold layer** using **Trino** as the distributed query engine, creating interactive executive dashboards via **Apache Superset**.
 *   **Workflow Orchestration (Airflow):** Automated a customer segmentation pipeline. Airflow coordinates dependencies across Silver tables, extracts high-value segments, exports the results to MinIO storage as CSVs, and triggers automated email alerts to the marketing team.
 
+
 ### ⚡ Part 2: Streaming & Real-Time Analytics
 Shifting from batch to sub-second latency, this section focuses on event-driven streaming architectures using the **Apache Kafka** ecosystem.
 
@@ -61,7 +63,8 @@ Shifting from batch to sub-second latency, this section focuses on event-driven 
 *   **Flash Sale Real-Time Dashboard:** Built a high-throughput streaming pipeline using Kafka, **ClickHouse** (OLAP storage), and **Streamlit** to provide live telemetry on conversion rates and traffic spikes during flash sales.
 *   **Anomaly Detection:** Implemented a stateful stream processing application using **Apache Flink** to monitor user login streams and flag anomalous, potentially fraudulent access patterns in real-time.
 
-### 🤖 Part 3: Data Engineering for AI & Machine Learning
+
+### 🤖 Part 3: Data Engineering for AI/Machine Learning
 Demonstrating how robust data pipelines serve as the foundation for modern machine learning and cognitive search systems.
 
 *   **Recommendation Engine Feature Store:** Engineered a machine learning feature pipeline using **Spark MLlib**. The pipeline extracts user behavior signals from Silver tables, computes behavioral features, and stores them in a high-performance Gold layer feature table optimized for a product recommendation model.
