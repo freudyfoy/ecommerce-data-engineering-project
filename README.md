@@ -50,7 +50,7 @@ The architecture is implemented using the Open-Source `Apache` Ecosystem to solv
 ### 🌟 Part 1: Modern Data Lakehouse & Batch ETL
 This section covers the core data infrastructure, utilizing the **Medallion Architecture** to transform raw transactional data into business insights.
 
-*   **Infrastructure Setup (Lakehouse Storage):** Designed and deployed an **Apache Iceberg** data lakehouse from the ground up to serve as the unified storage layer for OneShop's data assets.
+*   **Infrastructure Setup (Data Lakehouse):** Implemented an **Apache Iceberg** data lakehouse from the ground up to serve as the unified storage layer for OneShop's data assets.
 *   **Batch ETL Pipelines (Spark):** Developed PySpark batch pipelines to ingest raw application logs into the **Bronze layer**, applying schema enforcement and data cleaning to populate the **Silver layer**.
 *   **Ad-hoc Querying & Business Intelligence:** Defined analytical business models in the **Gold layer** using **Trino** as the distributed query engine, creating interactive executive dashboards via **Apache Superset**.
 *   **Workflow Orchestration (Airflow):** Automated a customer segmentation pipeline. Airflow coordinates dependencies across Silver tables, extracts high-value segments, exports the results to MinIO storage as CSVs, and triggers automated email alerts to the marketing team.
